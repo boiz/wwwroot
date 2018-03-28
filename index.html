@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Upload Ads (ver 0.85)</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<!-- 
+<form action="upload/upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit" id="submit">
+</form>
+ -->
+
+<div class="d-none">
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</div>
+
+<div class="container margin">
+
+        <h4>Instruction</h4>
+
+        <div>1, Select a PDF file</div>
+        <div>2, If file size is greater than 5 MB, please compress PDF using <a href="https://www.ilovepdf.com/compress_pdf" target="_blank">This Tool</a></div>
+        <div>3, Select location</div>
+        <div>4, Submit upload</div>
+
+
+    <div class="row margin">
+
+        <div class="col-md-3">
+            <button class="btn btn-success col" id="btn">Select a PDF File</button>
+        </div>
+
+        <div class="col-md-3">
+            <select class="form-control" id="sel">
+                <option value="select">Select Location</option>
+                <option value="south_ca">South CA</option>
+                <option value="north_ca">North CA</option>
+                <option value="las_vegas">Las Vegas</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="file d-none">
+
+        <div class="info">
+            <div class="sprite pdf" style="visibility: hidden;"></div>
+            <div class="data">
+                <div class="name"></div>
+                <div class="size"><span></span>KB</div>
+                <div class="type"></div>
+            </div>
+        </div>
+
+
+        <div class="check">
+            <div class="type"><span class="icon"></span><span class="fontsize">File type is <span class="not">NOT</span> PDF</span></div>
+            <div class="size"><span class="icon"></span><span class="fontsize">File size <span class="not">NOT</span> smaller than 5MB</span></div>
+            <div class="selected red"><span class="icon error"></span><span class="fontsize">Location <span class="not" style="display:inline">NOT</span class="not"> Selected</span></div>
+        </div>
+
+        <div class="row margin">
+            <div class="col-md-2">
+                <button class="btn btn-success btn-block" id="submit" disabled="disabled">Submit</button>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="successModal">
+<div class="modal-dialog modal-sm">
+  <div class="modal-content">
+  
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h4 class="modal-title">Upload Successfully</h4>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+    
+    <!-- Modal body -->
+    <div class="modal-body">
+      Thank You. View your PDF by <a id="view" target="_blank">This Link</a>
+    </div>
+    
+    <!-- Modal footer -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="errorModal">
+<div class="modal-dialog modal-sm">
+  <div class="modal-content">
+  
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h4 class="modal-title">Error</h4>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+    
+    <!-- Modal body -->
+    <div class="modal-body">
+      Please try again.
+    </div>
+    
+    <!-- Modal footer -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
+

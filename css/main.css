@@ -1,0 +1,68 @@
+.margin {
+    margin-top: 2em;
+}
+
+.info {
+    padding: 2em;
+    display: inline-block;
+}
+
+.info img {
+    width: 5em;
+}
+
+.info .data {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.info>* {
+    float: left;
+}
+
+.info .sprite {
+    background: url(../images/pdf.png) no-repeat;
+    width: 10em;
+    height: 10em;
+    background-size: cover;
+}
+
+.info .sprite.pdf {
+}
+
+.info .sprite.file {
+    background-position: -555px -343px;
+}
+
+.check .red {
+    color: red;
+}
+
+.check .green {
+    color: darkgreen;
+}
+
+.check .icon {
+    background: yellow;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background: url(../images/icons.jpg) no-repeat;
+}
+
+.check .icon.check {
+    background-position: -46px -10px;
+}
+
+.check .fontsize {
+    font-size: .8em;
+}
+
+.check .icon.error {
+    background-position: -78px -10px;
+}
+
+.check .not {
+    display: none;
+}
+
